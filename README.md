@@ -29,9 +29,9 @@ Login in to GItHub and Create a Repository named: Flutter-App
 
 Go to:
     Settings → Collaborators → Add people
-Enter your friend’s GitHub username
+Enter friend’s GitHub username
 Give Write access
-👉 Now your friend can:
+👉 Now others can:
 Create branches
 Push code
 Raise Pull Requests
@@ -43,13 +43,11 @@ Develop-               Integration branch
 Feature/* -            Work Branch
 
 
+===We can authenticate our terminal or VS Code to push code to a GitHub repository using three primary methods: the VS Code Built-in Account Sync, SSH Keys, or a Personal Access Token (PAT).===
+
 ==Create develop branch==
 git checkout -b develop
 git push origin develop
-
-
-
-
 
 
 
@@ -180,7 +178,6 @@ jobs:
 
 --------🔙 Step 9: Failure Handling (Rollback Logic)--------
 
-Good news:
 👉 GitHub already protects you automatically:
 ❌ If tests fail → merge blocked
 ❌ If build fails → PR rejected
@@ -193,3 +190,15 @@ You can revert:
 OR
     git reset --hard <last_good_commit>
 
+How it Gone a work:
+Now we can use below commands:  
+    git checkout develop
+    git pull origin develop
+
+    git checkout -b feature/<feature-name>
+
+After work:
+
+    git add .
+    git commit -m "feature added"
+    git push origin feature/<feature-name>

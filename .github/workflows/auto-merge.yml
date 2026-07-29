@@ -1,0 +1,22 @@
+name: Auto Merge to Main
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create PR to main
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: develop
+          title: "Auto Merge develop → main"
