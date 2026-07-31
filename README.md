@@ -202,3 +202,36 @@ After work:
     git add .
     git commit -m "feature added"
     git push origin feature/<feature-name>
+
+
+
+
+Now Install Flutter on mac as below commands to start project.
+
+Also can follow (https://docs.flutter.dev/platform-integration/macos/setup) to install flutter.
+ First install Cocoapods:
+    brew install cocoapods     (home brew does not support with sudo command)
+    OR
+    gem install cocoapods
+
+Install xcode also.
+
+To configure the Xcode command-line tools to use the version of Xcode you installed, run the following command in your preferred terminal:
+    sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
+
+
+Once you've accepted all the necessary licenses successfully, the command should output how to review the licenses.
+    sudo xcodebuild -license
+
+
+-----Install (ruby if not installed) for flutter then install flutter using belowcommands--------
+  brew install ruby
+  brew install flutter      (It needs Mac Os 14 to work)
+
+
+🧱 Step 1 — Create Flutter Project (Correct Way)
+📦 Create project locally
+
+  flutter create lan_chat_app
+  cd lan_chat_app
+
